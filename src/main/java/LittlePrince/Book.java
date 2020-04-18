@@ -3,6 +3,7 @@ package LittlePrince;
 import lombok.Data;
 
 import javax.xml.bind.annotation.*;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -16,6 +17,8 @@ public class Book {
 
     private String language;
     private String author;
+    private URL url;
+    private URL coverURL;
 
     private List<Price> price;
 

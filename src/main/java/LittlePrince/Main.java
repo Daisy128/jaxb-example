@@ -2,6 +2,7 @@ package LittlePrince;
 
 import jaxb.JAXBHelper;
 
+import java.net.URL;
 import java.util.*;
 
 public class Main {
@@ -11,6 +12,11 @@ public class Main {
         Book book = new Book();
 
         book.setName("Little Prince");
+        book.setLanguage("English");
+        book.setAuthor("Antoine Saint-Exupery");
+        book.setUrl(new URL("https://www.bookdepository.com/Little-Prince-Antoine-Saint-Exup%C3%A9ry/9780156012195?ref=pd_gw_1_pd_gateway_1_1#rating-distribution"));
+        book.setCoverURL(new URL("https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9780/1560/9780156012195.jpg"));
+
 
         ArrayList<Rating> ratings = new ArrayList<Rating>();
         ratings.add(new Rating(5,0.56,646444));
@@ -19,9 +25,6 @@ public class Main {
         ratings.add(new Rating(2,0.04,43175));
         ratings.add(new Rating(1,0.02, 20594));
         book.setRatings(ratings);
-
-        book.setLanguage("English");
-        book.setAuthor("Antoine Saint-Exupery");
 
         List<Price> price = new ArrayList<>();
         price.add(new Price("377Ft","3488Ft"));
